@@ -12,3 +12,9 @@ body {
   margin: 0;
   background-color: #3f3f3f;
 }
+
+.container {
+  width: 50vw;
+  margin: auto;
+  height: fit-content;
+}
