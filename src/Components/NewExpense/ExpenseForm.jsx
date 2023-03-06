@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./ExpenseForm.css";
 
-const ExpenseForm = ({ setExpenses, onSaveExpenseData }) => {
+const ExpenseForm = ({ onSaveExpenseData }) => {
   const [enteredTitle, setEnteredTitle] = useState("");
   const [enteredAmount, setEnteredAmount] = useState("");
   const [enteredDate, setEnteredDate] = useState("");
@@ -53,8 +53,8 @@ const ExpenseForm = ({ setExpenses, onSaveExpenseData }) => {
           <label>Date</label>
           <input
             type="date"
-            min="2023-01-01"
-            max="2025-12-31"
+            min="2022-01-01"
+            max="2026-12-31"
             onChange={dateChangeHandler}
             value={enteredDate}
           />
