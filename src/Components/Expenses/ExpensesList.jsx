@@ -16,7 +16,6 @@ const ExpensesList = ({ filteredExpenses }) => {
           key={expense.id}
         />
       ))}
-      ;
     </ul>
   );
 };
