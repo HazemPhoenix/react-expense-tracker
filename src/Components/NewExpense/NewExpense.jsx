@@ -11,24 +11,23 @@ const NewExpense = (props) => {
     props.onAddExpense(expenseData);
   };
 
-  const [clicked, setClicked] = useState(false);
-  const addExpenseHandler = () => {
-    setClicked(true);
+  const [showForm, setShowForm] = useState(false);
+  const showFormHandler = () => {
+    setShowForm(true);
   };
   const hideFormHandler = () => {
-    setClicked(false);
+    setShowForm(false);
   };
 
   return (
     <div className="new-expense">
-      {clicked ? (
+      {showForm && (
         <ExpenseForm
           onSaveExpenseData={saveExpenseDataHandler}
           hideForm={hideFormHandler}
         />
-      ) : (
-        <button onClick={addExpenseHandler}>Add New Expense</button>
       )}
+      {!showForm && <button onClick={showFormHandler}>Add New Expense</button>}
     </div>
   );
 };
